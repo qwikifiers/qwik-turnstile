@@ -1,3 +1,4 @@
+
 import {
   component$,
   PropsOf,
@@ -6,12 +7,12 @@ import {
   useVisibleTask$,
 } from "@builder.io/qwik";
 
-export type useTurnstileProps = {
+export type UseTurnstileProps = {
   siteKey: string;
   onTokenResponse$?: QRL<(token: string) => void>;
 };
 
-export function useTurnstile({ siteKey, onTokenResponse$ }: useTurnstileProps) {
+export function useTurnstile({ siteKey, onTokenResponse$ }: UseTurnstileProps) {
   const tokenSignal = useSignal("");
 
   // eslint-disable-next-line qwik/no-use-visible-task

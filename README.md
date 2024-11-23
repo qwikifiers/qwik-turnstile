@@ -1,5 +1,3 @@
-
-
 <h1 align='center'>Qwik Turnstile</h1>
 <p align="center">
   <img width="400" src="./media/turnstile.gif" alt="Cloudflare Turnstile">
@@ -21,6 +19,22 @@
 
 </div>
 
+<!-- toc -->
+
+- [Installation](#installation)
+- [Usage](#usage)
+  * [Examples](#examples)
+  * [🦜 `useTurnstile()` hook](#%F0%9F%A6%9C-useturnstile-hook)
+  * [✅ `verifyTurnstile()`](#%E2%9C%85-verifyturnstile)
+  * [🔁 `resetTurnstile()`](#%F0%9F%94%81-resetturnstile)
+- [Contributing](#contributing)
+- [Code Of Conduct](#code-of-conduct)
+- [Contributors](#contributors)
+- [Related Links](#related-links)
+- [License](#license)
+
+<!-- tocstop -->
+
 ## Installation
 
 ```console
@@ -28,6 +42,7 @@ pnpm add qwik-turnstile
 ```
 
 ## Usage
+
 
 ### 🦜 `useTurnstile()` hook
 
@@ -42,7 +57,7 @@ export default component$(() => {
     const { Turnstile, tokenSignal } = useTurnstile(
         {
         siteKey: import.meta.env.VITE_TURNSTILE_SITEKEY,
-        onResponse$: $((response) => {
+        onTokenResponse$: $((response) => {
             // set the value of an input field
         }),
         }
