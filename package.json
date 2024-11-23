@@ -20,6 +20,7 @@
     "type": "git",
     "url": "https://github.com/qwikifiers/qwik-turnstile"
   },
+
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
@@ -37,7 +38,7 @@
     "fmt.staged": "pretty-quick --staged",
     "lint": "eslint \"src/**/*.ts*\"",
     "release.pkg-pr-new": "pnpm dlx pkg-pr-new@^0.0.30 publish",
-    "release": "np",
+    "release": "changeset publish",
     "start": "vite --open --mode ssr",
     "test": "echo \"No test specified\" && exit 0",
     "qwik": "qwik"
