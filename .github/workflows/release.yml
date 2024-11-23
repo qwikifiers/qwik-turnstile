@@ -44,10 +44,10 @@ jobs:
         shell: bash
         run: pnpm build
 
-      - name: Publish any commit / build for testing
-        run: pnpm release.pkg-pr-new
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Publish any commit / build for testing
+      #   run: pnpm release.pkg-pr-new
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release Pull Request or Publish
         if: github.ref == 'refs/heads/main'
