@@ -60,10 +60,14 @@ import { verifyTurnstile } from 'qwik-turnstile';
 
 export const useFormAction = routeAction$(async (values, requestEvent) => {
 
+    
     const token = values.turnstileToken;
     const secret = requestEvent.env.get("TURNSTILE_SECRET");
 
     const verified = await verifyTurnstile(token, secret);
+    
+    // you can also call `verifyTurnstile(token, secret, {debug: true})`
+    // if `debug` is set to `true` it will log the response from turnstile to the console
 
     if (!verified) {
       console.error("Turnstile Verification Error");
