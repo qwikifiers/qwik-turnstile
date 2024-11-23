@@ -1,0 +1,64 @@
+{
+  "name": "qwik-turnstile",
+  "version": "0.0.0",
+  "description": "Qwik integration with Cloudflare Turnstile",
+  "main": "./lib/index.qwik.mjs",
+  "qwik": "./lib/index.qwik.mjs",
+  "types": "./lib-types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.qwik.mjs",
+      "require": "./lib/index.qwik.cjs",
+      "types": "./lib-types/index.d.ts"
+    }
+  },
+  "files": [
+    "lib",
+    "lib-types"
+  ],
+  "engines": {
+    "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  },
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "qwik build",
+    "build.lib": "vite build --mode lib",
+    "build.types": "tsc --emitDeclarationOnly",
+    "change": "changeset",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "fmt.staged": "pretty-quick --staged",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "release": "np",
+    "start": "vite --open --mode ssr",
+    "test": "echo \"No test specified\" && exit 0",
+    "qwik": "qwik"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "1.10.0",
+    "@changesets/cli": "^2.27.10",
+    "@changesets/get-github-info": "^0.6.0",
+    "@changesets/types": "^6.0.0",
+    "@types/eslint": "8.56.10",
+    "@types/node": "20.14.11",
+    "@typescript-eslint/eslint-plugin": "7.16.1",
+    "@typescript-eslint/parser": "7.16.1",
+    "all-contributors-cli": "^6.24.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-qwik": "1.10.0",
+    "np": "^8.0.4",
+    "prettier": "3.3.3",
+    "pretty-quick": "^4.0.0",
+    "simple-git-hooks": "2.11.1",
+    "typescript": "5.4.5",
+    "undici": "*",
+    "vite": "5.3.5",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm fmt.staged && pnpm lint"
+  }
+}
