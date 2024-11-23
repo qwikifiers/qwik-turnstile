@@ -1,6 +1,6 @@
 {
   "name": "qwik-turnstile",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Qwik integration with Cloudflare Turnstile",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
