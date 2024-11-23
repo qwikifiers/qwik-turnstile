@@ -43,6 +43,9 @@
     "test": "echo \"No test specified\" && exit 0",
     "qwik": "qwik"
   },
+  "peerDependencies": {
+    "@builder.io/qwik": ">=1.0.0"
+  },
   "devDependencies": {
     "@builder.io/qwik": "1.10.0",
     "@changesets/cli": "^2.27.10",
