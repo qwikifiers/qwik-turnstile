@@ -6,7 +6,7 @@
 </p>
 
 <div align='center'>
-  Effortless human verification for Qwik apps with Cloudflare Turnstile integration
+  Effortless human verification for Qwik apps with [Cloudflare Turnstile](https://www.cloudflare.com/application-services/products/turnstile/) integration
   <br><br>
 
   <a href='https://img.shields.io/npm/v/qwik-turnstile?label=npm%20version'>
