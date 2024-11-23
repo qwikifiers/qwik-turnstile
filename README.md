@@ -56,10 +56,10 @@ export default component$(() => {
     
     const { Turnstile, tokenSignal } = useTurnstile(
         {
-        siteKey: import.meta.env.VITE_TURNSTILE_SITEKEY,
-        onTokenResponse$: $((response) => {
-            // set the value of an input field
-        }),
+            siteKey: import.meta.env.VITE_TURNSTILE_SITEKEY,
+            onTokenResponse$: $((response) => {
+                // set the value of an input field
+            }),
         }
     );
 
