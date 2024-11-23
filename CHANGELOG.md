@@ -1,5 +1,11 @@
 # qwik-turnstile
 
+## 0.0.3
+
+### Patch Changes
+
+- Captilize props type (by [@shairez](https://github.com/shairez) in [`419772f`](https://github.com/qwikifiers/qwik-turnstile/commit/419772f8b8dea7663ee60cb99450e0ccf08850dd))
+
 ## 0.0.2
 
 ### Patch Changes
